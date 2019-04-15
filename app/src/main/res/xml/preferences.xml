@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="Synchronization">
+
+    <CheckBoxPreference
+        app:defaultValue="false"
+        app:key="pref_sync"
+        app:summary="thfdkf kfjdfkdjfdkfdjfkd fdfkjdkfjdffdjkf dfkdjfdkfjdfkdjffjdkfd fkdjfkdjfjfdkfjd"
+        app:title="Sync" />
+
+    <ListPreference
+        app:defaultValue="Wifi"
+        app:dependency="pref_sync"
+        app:entries="@array/pref_sync_connection_type_entries_values"
+        app:entryValues="@array/pref_sync_connection_type_entries_values"
+        app:key="pref_sync_connection_type"
+        app:summary="Wifi"
+        app:title="Sync Connection Type" />
+
+    </PreferenceCategory>
+
+    <SwitchPreferenceCompat
+        app:defaultValue="true"
+        app:key="pref_notifications"
+        app:title="Enable message notifications"/>
+
+    <Preference
+        app:dependency="pref_notifications"
+        app:title="Notification Title" />
+
+    <PreferenceCategory app:title="STORAGE">
+
+        <CheckBoxPreference
+            app:defaultValue="true"
+            app:key="pref_delete_old_message"
+            app:summary="thfdkf kfjdfkdjfdkfdjfkd fdfkjdkfjdffdjkf dfkdjfdkfjdfkdjffjdkfd fkdjfkdjfjfdkfjd"
+            app:title="Delete Old Message" />
+
+        <Preference
+            app:dependency="pref_delete_old_message"
+            app:summary="thfdkf kfjdfkdjfdkfdjfkd fdfkjdkfjdffdjkf dfkdjfdkfjdfkdjffjdkfd fkdjfkdjfjfdkfjd"
+            app:title="Text Message Limit" />
+
+        <Preference
+            app:dependency="pref_delete_old_message"
+            app:summary="thfdkf kfjdfkdjfdkfdjfkd fdfkjdkfjdffdjkf dfkdjfdkfjdfkdjffjdkfd fkdjfkdjfjfdkfjd"
+            app:title="Multimedia Message Limit" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Text Message Group">
+
+    <CheckBoxPreference
+        app:key="pref_delivery_reports_sms"
+        app:title="Delivery Report Title"
+        app:summary="thfdkf kfjdfkdjfdkfdjfkd fdfkjdkfjdffdjkf dfkdjfdkfjdfkdjffjdkfd fkdjfkdjfjfdkfjd"
+        app:defaultValue="true" />
+
+    <Preference
+        app:title="SimCard Message Title"
+        app:summary="thfdkf kfjdfkdjfdkfdjfkd fdfkjdkfjdffdjkf dfkdjfdkfjdfkdjffjdkfd fkdjfkdjfjfdkfjd"
+        app:dependency="pref_delivery_reports_sms" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Sub Screen Setting">
+
+        //Preference Sub-Screen
+        <PreferenceScreen
+            app:key="pref_voice_mail"
+            app:title="Voice Mail"
+            app:persistent="false">
+
+            <Preference
+                app:title="Service"
+                app:summary="thfdkf kfjdfkdjfdkfdjfkd fdfkjdkfjdffdjkf dfkdjfdkfjdfkdjffjdkfd fkdjfkdjfjfdkfjd" />
+
+            <Preference
+                app:title="Setup" />
+
+            <Preference
+                app:title="Vibrate"
+                app:summary="thfdkf kfjdfkdjfdkfdjfkd fdfkjdkfjdffdjkf dfkdjfdkfjdfkdjffjdkfd fkdjfkdjfjfdkfjd" />
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

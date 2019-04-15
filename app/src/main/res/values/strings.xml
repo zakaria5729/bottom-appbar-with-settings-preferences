@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BottomAppBar</string>
+
+    <string-array name="pref_sync_connection_type_entries_values">
+        <item>Wifi</item>
+        <item>Mobile Data</item>
+        <item>Wifi/Mobile Data</item>
+    </string-array>
+
+</resources>

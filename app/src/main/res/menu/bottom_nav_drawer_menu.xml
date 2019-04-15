@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/default_fragment"
+            android:icon="@drawable/ic_home"
+            android:title="Default Fragment" />
+
+        <item
+            android:id="@+id/first_fragment"
+            android:icon="@drawable/ic_close"
+            android:title="First Fragment" />
+
+        <item
+            android:id="@+id/second_fragment"
+            android:icon="@drawable/ic_add"
+            android:title="Second Fragment" />
+    </group>
+</menu>
